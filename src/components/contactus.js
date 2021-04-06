@@ -19,7 +19,7 @@ class Contactus extends React.Component{
     handlesubmit=()=>{
         const {firstname,lastname,email,password,comment}=this.state;
         axios({
-            url:'http://localhost:8080/contactus',
+            url:'https://fathomless-badlands-79053.herokuapp.com/contactus',
             method:'POST',
             headers:{'content-Type':'application/json'},
             data:
