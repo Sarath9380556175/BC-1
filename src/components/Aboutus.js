@@ -15,7 +15,7 @@ class Aboutus extends React.Component{
     componentDidMount()
     {
         axios({
-            url:'http://localhost:8080/aboutus',
+            url:'https://fathomless-badlands-79053.herokuapp.com/aboutus',
             method:'get',
             headers:{'content-Type':'application/json'}
         })
@@ -25,7 +25,7 @@ class Aboutus extends React.Component{
 
 
 axios({
-    url:'http://localhost:8080/aboutusdetails',
+    url:'https://fathomless-badlands-79053.herokuapp.com/aboutusdetails',
     method:'get',
     headers:{'content-Type':'application/json'}
 })
