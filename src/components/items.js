@@ -41,7 +41,7 @@ class Items extends React.Component{
         console.log(price)
 
         axios({
-            url:'http://localhost:8080/itemslist',
+            url:'https://fathomless-badlands-79053.herokuapp.com/itemslist',
             method:'POST',
             headers:{'content-Type':'application/json'},
             data:
@@ -142,7 +142,7 @@ post = (details) => {
 }
 
 getData = (data) => {
-    return fetch(`http://localhost:8080/payment`, {
+    return fetch(`https://fathomless-badlands-79053.herokuapp.com/payment`, {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -166,7 +166,7 @@ makePayment = (e) => {
 
     const {name,password,mobilenumber,gender}=this.state;
     axios({
-        url:'http://localhost:8080/paymentform',
+        url:'https://fathomless-badlands-79053.herokuapp.com/paymentform',
         method:'POST',
         headers:{'content-Type':'application/json'},
         data:
