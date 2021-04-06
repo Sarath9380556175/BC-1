@@ -18,7 +18,7 @@ componentDidMount()
   
   const mealtype=qs.restaurant;
     axios({
-        url:'http://localhost:8080/restaurantsfilter',
+        url:'https://fathomless-badlands-79053.herokuapp.com/restaurantsfilter',
         method:'POST',
         headers:{'content-Type':'application/json'},
         data:
