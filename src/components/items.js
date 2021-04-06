@@ -163,7 +163,7 @@ makePayment = (e) => {
     })
     e.preventDefault();
 
-
+  
     const {name,password,mobilenumber,gender}=this.state;
     axios({
         url:'https://fathomless-badlands-79053.herokuapp.com/paymentform',
