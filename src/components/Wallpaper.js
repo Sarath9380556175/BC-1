@@ -395,7 +395,7 @@ this.setState({[state]:value})
   <a href="https://www.youtube.com" className="dropdown-item bg-dark text-white">complaints</a>
 
   </div>
-  <button className="btn btn-primary" data-toggle="popover" title="SKR Restaurant" data-content="we have Variety of dishes" data-trigger="focus" onClick={this.Dishes}>Dishes</button>
+
   <button className="btn btn-primary" onClick={this.Aboutus}>About Us</button>
   <button className="btn btn-primary" onClick={this.Contactus}>Contact Us</button>
 </div>
