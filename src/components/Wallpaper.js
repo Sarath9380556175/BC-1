@@ -70,7 +70,7 @@ class Wallpaper extends React.Component{
   {
     sessionStorage.clear();
     axios({
-      url:'http://localhost:8080/signups',
+      url:'https://fathomless-badlands-79053.herokuapp.com/signups',
       method:'GET',
       headers:{'content-Type':'application/json'}
     }).then(res=>this.setState({getsignupdetails:res.data.signupdetails, mails:res.data.signupdetails.map((item)=>{return item.email})}))
@@ -92,7 +92,7 @@ class Wallpaper extends React.Component{
         this.props.history.push('/rateus')
     }
     Dishes=()=>{
-      this.props.history.push('./Dishes')
+      this.props.history.push('/Dishes')
     }
 
     handleclick=(state,value)=>{
@@ -124,7 +124,7 @@ this.setState({[name]:value})
          const mailing=queryString.parse(mails)
          console.log(mailing)
          axios({
-    url:'http://localhost:8080/login',
+    url:'https://fathomless-badlands-79053.herokuapp.com/login',
     method:'POST',
     headers:{'content-Type':'application/json'},
     data:
@@ -201,7 +201,7 @@ this.setState({[name]:value})
      console.log(mailing)
         axios({
           
-          url:'http://localhost:8080/signup',
+          url:'https://fathomless-badlands-79053.herokuapp.com/signup',
           method:'POST',
           headers:{'content-Type':'application/json'},
          
@@ -251,7 +251,7 @@ this.setState({[state]:value})
        locationId=(event)=>{
          const location=event.target.value;
          axios({
-           url:'http://localhost:8080/restaurantsfilter',
+           url:'https://fathomless-badlands-79053.herokuapp.com/restaurantsfilter',
            method:'POST',
            headers:{'content-Type':'application/json'},
            data:
