@@ -384,7 +384,7 @@ this.setState({[state]:value})
 <div className="container-fluid jumbotron text-center" style={{background:"url(Assets/restaurantlogo.jpg)"}}>
 
   <div className="logo">
-  <p className="skrs">SKR <i className="fas fa-coffee bg-warning rounded" id="top"></i> <b>R</b>estaurant</p>
+  <p className="skrs">{googleimage ? <img src={`${googleimage}`} alt="Nothing Found" className="gimage rounded-circle"/> :<div>SKR <i className="fas fa-coffee bg-warning rounded" id="top"></i> <b>R</b>estaurant</div>}</p>
 </div>
 <br/><br/>
 <div className="btn-group">
