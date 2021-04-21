@@ -6,6 +6,7 @@ import axios from 'axios';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import queryString from 'query-string';
+import {motion} from 'framer-motion'
 const customStyles = {
   content : {
     top                   : '50%',
@@ -384,7 +385,7 @@ this.setState({[state]:value})
 <div className="container-fluid jumbotron text-center" style={{background:"url(Assets/restaurantlogo.jpg)"}}>
 
   <div className="logo">
-  <p className="skrs">{googleimage ? <img src={`${googleimage}`} alt="Nothing Found" className="gimage rounded-circle"/> :<div>SKR <i className="fas fa-coffee bg-warning rounded" id="top"></i> <b>R</b>estaurant</div>}</p>
+  <p className="skrs">{googleimage ? <motion.img src={`${googleimage}`} alt="Nothing Found" className="gimage rounded-circle" initial={{y:400}}  animate={{y:-5}}/> :<motion.div initial={{y:400}}  animate={{y:-5}}>SKR <i className="fas fa-coffee bg-warning rounded" id="top"></i> <b>R</b>estaurant</motion.div>}</p>
 </div>
 <br/><br/>
 <div className="btn-group">
@@ -488,7 +489,7 @@ style={customStyles}
        <i className="fas fa-male"></i>&nbsp;<input type="radio" name="genders" required   onChange={()=>this.handlegenders('female')}/>&nbsp;Female&nbsp;&nbsp;
        <i className="fas fa-male"></i>&nbsp;<input type="radio" name="genders" required    onChange={()=>this.handlegenders('others')}/>&nbsp;Others<br/><br/>
 
-       <button className="btn btn-primary">Submit</button>
+       <motion.button className="btn btn-primary" initial={{x:'-100vw'}} animate={{x:0}}>Submit</motion.button>
           
               </form>
               <span>Already have an account<span  onClick={()=>this.handleclick('isuserwanttologin',true)} style={{textDecoration:'none',color:'green'}}>&nbsp;SignIn</span></span>
@@ -514,7 +515,7 @@ style={customStyles}
  Gender:<i className="fas fa-male"></i>&nbsp;<input type="radio" name="gender" onChange={()=>this.handlegender('male')} required/>&nbsp;Male&nbsp;
  <i className="fas fa-female"></i>&nbsp;<input type="radio" name="gender" onChange={()=>this.handlegender('female')} required/>&nbsp;Female&nbsp;
  <i className="fas fa-female"></i>&nbsp;<input type="radio" name="gender" onChange={()=>this.handlegender('others')} required/>&nbsp;Others<br/><br/>
-  <button className="btn btn-primary">submit</button>
+  <motion.button className="btn btn-primary" initial={{x:'-100vw'}} animate={{x:0}}>submit</motion.button>
 </form>
 <span>Dont have an account<span onClick={()=>this.handleaccount('iscreatingaccount',true)} style={{textDecoration:'none',color:'red'}}>&nbsp;Signup</span></span>
 </div>
