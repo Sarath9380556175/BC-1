@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import '../styles/contactus.css';
+import {motion} from 'framer-motion';
 class Contactus extends React.Component{
     constructor()
     {
@@ -78,15 +79,15 @@ class Contactus extends React.Component{
 <div className="jumbotron text-center">
 		<div style={{fontWeight: "bold"}}>Contactus
 <br/>
-<form className="rounded forms" name="formdata"  onSubmit={this.handlesubmit}>
+<motion.form className="rounded forms" name="formdata"  onSubmit={this.handlesubmit} animate={{rotate:360}}>
     {/*eslint-disable-next-line*/}
 <i className="fas fa-user"></i>&nbsp;&nbsp;<input type="text" name="firstname"   required  style={{border:"2px solid black"}} className="rounded"  onChange={this.firstname}/><br/><br/>
 <i className="fas fa-user"></i>&nbsp;&nbsp;<input type="text" name="lastname"  required  className="rounded" style={{border:"2px solid black"}} onChange={this.lastname} /><br/><br/>
 <i className="fas fa-lock"></i>&nbsp;&nbsp;<input type="password" name="password"  required className="rounded text-primary" style={{border:"2px solid black"}} onChange={this.password}/><br/><br/>
 <i className="fas fa-envelope"></i>&nbsp;&nbsp;<input type="email" name="email" required  className="rounded" style={{border:"2px solid black"}}  onChange={this.email}/><br/><br/>
 <i className="fas fa-comment"></i>&nbsp;&nbsp;<textarea rows="3" cols="20" width="200" height="30" required   name="comment" className="text-success" style={{fontSize: "12px"}} onChange={this.comment}></textarea><br/><br/>
-<button className="btn btn-primary btn-sm">submit</button>
-</form>
+<motion.button className="btn btn-primary btn-sm" initial={{x:'-100vw'}} animate={{x:0}}>submit</motion.button>
+</motion.form>
 </div>
 
 </div>
