@@ -86,7 +86,7 @@ axios({
        
 {
     aboutusdetails.map((item)=>{
-        return  <div className="aboutus1 rounded" animate={{rotate:360}}>
+        return  <motion.div className="aboutus1 rounded" animate={{rotate:360}}>
         
         <div>
             <img src={`../${item.image}`} width="300px" height="150px"  className="rounded " alt="Not found"/>
@@ -96,13 +96,13 @@ axios({
                 <div style={{fontSize:'20px',fontStyle:'italic',fontFamily:'serif',color:'LimeGreen',fontWeight:'bold'}}>{item.developer_name}</div>
                 
                 <br/>
-                <div style={{color:'orangered',fontWeight:'bold',fontStyle:'italic',fontFamily:'serif'}}>{item.developer_role}</div>
+                <motion.div style={{color:'orangered',fontWeight:'bold',fontStyle:'italic',fontFamily:'serif'}} initial={{y:'-100vw'}} animate={{y:0}}>{item.developer_role}</motion.div>
            
                 <br/>
            <button className="btn  btn-secondary bg-dark" style={{padding:'5px 35px 5px 35px'}} onClick={this.handleClick}>{item.contact_name}</button>
             
             </div>
-        </div>
+        </motion.div>
     })
 }
 </div>
