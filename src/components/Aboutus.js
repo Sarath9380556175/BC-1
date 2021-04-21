@@ -1,6 +1,13 @@
 import React from 'react';
 import '../styles/aboutus.css';
-import axios from 'axios'
+import axios from 'axios';
+import {motion} from 'framer-motion';
+import {animations,easings} from 'react-animation';
+const styles={
+    animation:`pop-in ${easings.easeOutExpo} 5000ms forwards`,
+    fontSize:'25px',
+    fontWeight:'bold'
+}
 class Aboutus extends React.Component{
     constructor()
     {
@@ -55,19 +62,19 @@ axios({
         aboutus.map((item)=>{
             return <div>
             
-            <h2 class="aboutus">{item.title}</h2>
+            <motion.h2 class="aboutus" animate={{rotate:360}}>{item.title}</motion.h2>
             <div class="jumbotron container" style={{background:`url(${item.image})`}}>
-             <h6 style={{color:'yellow'}}>{item.aboutus}</h6>
+             <motion.h6 style={{color:'yellow'}} initial={{x:'-100vw'}} animate={{x:0}}>{item.aboutus}</motion.h6>
            
         
-    </div>
+    </motion.div>
 </div>
         })
         }
 </div>
 {
     aboutus.map((item)=>{
-        return  <div className="text-center" style={{fontSize:'25px',fontWeight:'bold'}}>{item.name}</div>
+        return  <div className="text-center" style={styles}>{item.name}</div>
 
     })
 }
@@ -79,7 +86,7 @@ axios({
        
 {
     aboutusdetails.map((item)=>{
-        return  <div className="aboutus1 rounded">
+        return  <div className="aboutus1 rounded" animate={{rotate:360}}>
         
         <div>
             <img src={`../${item.image}`} width="300px" height="150px"  className="rounded " alt="Not found"/>
