@@ -16,7 +16,7 @@ class QuicksearchItem extends React.Component{
       <div style={{display: "inline-block",width: "45%"}}>
           <img src={items.image} width="129px" height="149px" alt="notfound" className="rounded-circle"/>
       </div>
-<AnimateSharedLayout>
+<AnimateSharedLayout type="crossfade">
       <div style={{display: "inline-block",width: "45%",verticalAlign: "top"}} className="ml-3">
           <motion.div className="badge badge-dark rounded-circle  ml-3">{items.badge}</motion.div>
           <motion.div className="burger">{items.name}</motion.div>
